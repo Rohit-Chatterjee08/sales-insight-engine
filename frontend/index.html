@@ -24,6 +24,41 @@
                 <p id="progressText" class="mt-2">AI agents at work...</p>
             </div>
 
+            <!-- The Welcome / How-to-Use Section -->
+            <div id="welcome-container">
+                <div class="welcome-card">
+                    <div class="welcome-body text-center">
+                        <h1 class="welcome-title">Welcome to the AI Insights Engine</h1>
+                        <p class="welcome-subtitle">Instantly transform your raw data files into interactive dashboards and professional reports.</p>
+
+                        <div class="how-to-use">
+                            <h2 class="how-to-use-title">How It Works</h2>
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-text">
+                                    <strong>Upload Your Data</strong>
+                                    <p>Click 'Choose File' and select your CSV, Excel, or JSON file.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-text">
+                                    <strong>Start the Analysis</strong>
+                                    <p>Click 'Generate Dashboard' to let the AI agents work their magic.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-text">
+                                    <strong>Explore Your Insights</strong>
+                                    <p>View the interactive dashboard or switch to the 'Detailed Analysis' tab for a full report.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="results-container" class="d-none">
                 <!-- Tab Navigation -->
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -37,14 +72,10 @@
 
                 <!-- Tab Content -->
                 <div class="tab-content" id="myTabContent">
-                    <!-- Dashboard Tab -->
                     <div class="tab-pane fade show active" id="dashboard-pane" role="tabpanel">
                         <div id="kpi-container" class="row g-4 py-4"></div>
-                        <div id="charts-container" class="row g-4">
-                            <!-- Chart cards will be dynamically inserted here -->
-                        </div>
+                        <div id="charts-container" class="row g-4"></div>
                     </div>
-                    <!-- Analysis Tab -->
                     <div class="tab-pane fade" id="analysis-pane" role="tabpanel">
                         <div class="report-container" id="reportOutput"></div>
                     </div>
@@ -56,8 +87,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
-    <!-- The cache buster forces the browser to load the latest script -->
-    <script src="script.js?v=BULLETPROOF_FINAL_6.0"></script>
+    <script src="script.js?v=PERMANENT_UI_FIX_FINAL"></script>
 </body>
 </html>
 
