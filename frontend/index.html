@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Insights Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="main-header">
+            <h1 class="logo">🤖 AI Insights Engine</h1>
+            <div class="file-upload-section">
+                <input class="form-control" type="file" id="fileUpload" accept=".csv, .xlsx, .xls, .json">
+                <button class="btn btn-primary" id="generateBtn">Generate Dashboard</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="loader" class="loader-container d-none">
+                <div class="spinner-border text-primary" role="status"></div>
+                <p id="progressText" class="mt-2">AI agents at work...</p>
+            </div>
+
+            <!-- The Welcome / How-to-Use Section -->
+            <div id="welcome-container">
+                <div class="welcome-card">
+                    <div class="welcome-body text-center">
+                        <h1 class="welcome-title">Welcome to the AI Insights Engine</h1>
+                        <p class="welcome-subtitle">Instantly transform your raw data files into interactive dashboards and professional reports.</p>
+
+                        <div class="how-to-use">
+                            <h2 class="how-to-use-title">How It Works</h2>
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div class="step-text">
+                                    <strong>Upload Your Data</strong>
+                                    <p>Click 'Choose File' and select your CSV, Excel, or JSON file.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div class="step-text">
+                                    <strong>Start the Analysis</strong>
+                                    <p>Click the 'Generate Dashboard' button to let the AI agents work their magic.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div class="step-text">
+                                    <strong>Explore Your Insights</strong>
+                                    <p>View the interactive dashboard or switch to the 'Detailed Analysis' tab for a full report.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results-container" class="d-none">
+                <!-- Tab Navigation -->
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="dashboard-tab" data-bs-toggle="tab" data-bs-target="#dashboard-pane" type="button" role="tab">Dashboard</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="analysis-tab" data-bs-toggle="tab" data-bs-target="#analysis-pane" type="button" role="tab">Detailed Analysis</button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="dashboard-pane" role="tabpanel">
+                        <div id="kpi-container" class="row g-4 py-4"></div>
+                        <div id="charts-container" class="row g-4"></div>
+                    </div>
+                    <div class="tab-pane fade" id="analysis-pane" role="tabpanel">
+                        <div class="report-container" id="reportOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <script src="script.js?v=PERMANENT_UI_FIX"></script>
+</body>
+</html>
+

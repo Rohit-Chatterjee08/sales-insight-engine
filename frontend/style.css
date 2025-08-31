@@ -1,0 +1,233 @@
+:root {
+    --bg-color: #1a1a1d;
+    --card-color: #2c2c34;
+    --border-color: #444;
+    --text-color: #f0f0f0;
+    --text-muted-color: #a0a0a0;
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+}
+
+.container-fluid {
+    padding: 0 2rem;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.file-upload-section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.form-control {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.form-control:focus {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+}
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+/* --- THE FIX: Styles for the new Welcome / How-to-Use section --- */
+.welcome-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem;
+}
+
+.welcome-title {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.welcome-subtitle {
+    color: var(--text-muted-color);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.how-to-use {
+    text-align: left;
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+}
+
+.how-to-use-title {
+    text-align: center;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* --- THE VISIBILITY FIX --- */
+.step-text strong {
+    color: var(--text-color) !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.step-text p {
+    color: var(--text-muted-color) !important;
+    margin-bottom: 0;
+}
+
+
+/* Tab Styles */
+.nav-tabs {
+    border-bottom: 1px solid var(--border-color);
+}
+.nav-tabs .nav-link {
+    background: transparent;
+    border: none;
+    color: var(--text-muted-color);
+    font-weight: 500;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
+    color: var(--text-color);
+}
+.nav-tabs .nav-link.active {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.tab-content {
+    padding-top: 2rem;
+}
+
+/* KPI Card Styles */
+.kpi-card {
+    background-color: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.kpi-title {
+    font-size: 1rem;
+    color: var(--text-muted-color);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.kpi-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+/* Chart Card Styles */
+.chart-card {
+    background-color: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 450px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+.chart-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.chart-card canvas {
+    flex-grow: 1;
+}
+
+/* Report Container Styles */
+.report-container {
+    background-color: var(--card-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    max-height: 80vh;
+    overflow-y: auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.report-container h1, .report-container h2, .report-container h3 {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.report-container p, .report-container li {
+    color: var(--text-muted-color);
+}
+.report-container strong {
+    color: var(--text-color);
+}
+
+/* Utility Classes */
+.d-none {
+    display: none !important;
+}
+

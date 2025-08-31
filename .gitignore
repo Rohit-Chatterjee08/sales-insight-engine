@@ -1,0 +1,22 @@
+Virtual Environment
+venv/
+*.venv
+env/
+.env
+
+Python cache files
+pycache/
+*.pyc
+*.pyo
+*.pyd
+
+Temporary files from our application
+temp_*.csv
+fmcg_reports.db
+
+Cache directory
+cache/
+
+IDE files
+.vscode/
+.idea/

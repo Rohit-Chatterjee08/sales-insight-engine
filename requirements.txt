@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+crewai
+langchain-mistralai
+pandas
+python-multipart
+aiofiles
+showdown
+openpyxl
+gunicorn
