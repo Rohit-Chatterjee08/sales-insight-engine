@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generateBtn');
     const loader = document.getElementById('loader');
     const resultsContainer = document.getElementById('results-container');
+    const welcomeContainer = document.getElementById('welcome-container'); // Get the new welcome container
     
     const reportOutput = document.getElementById('reportOutput');
     const kpiContainer = document.getElementById('kpi-container');
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // --- Robust State Management ---
         generateBtn.disabled = true;
         generateBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Analyzing...`;
+        welcomeContainer.classList.add('d-none'); // Hide welcome message
         loader.classList.remove('d-none');
         resultsContainer.classList.add('d-none');
         
