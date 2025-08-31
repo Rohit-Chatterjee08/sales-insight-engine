@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const generateBtn = document.getElementById('generateBtn');
     const loader = document.getElementById('loader');
     const resultsContainer = document.getElementById('results-container');
-    const welcomeContainer = document.getElementById('welcome-container'); // Get the new welcome container
     
     const reportOutput = document.getElementById('reportOutput');
     const kpiContainer = document.getElementById('kpi-container');
@@ -67,10 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const file = document.getElementById('fileUpload').files[0];
         if (!file) { alert('Please select a file first.'); return; }
 
-        // --- THE FIX: Robust State Management for UI visibility ---
+        // --- Robust State Management ---
         generateBtn.disabled = true;
         generateBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Analyzing...`;
-        welcomeContainer.classList.add('d-none'); // Hide welcome message
         loader.classList.remove('d-none');
         resultsContainer.classList.add('d-none');
         
@@ -104,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
             new bootstrap.Tab(document.getElementById('analysis-tab')).show();
             resultsContainer.classList.remove('d-none');
         } finally {
-            // This block is guaranteed to run
+            // This block is guaranteed to run, permanently fixing the "stuck button"
             generateBtn.disabled = false;
             generateBtn.innerHTML = 'Generate Dashboard';
             loader.classList.add('d-none');
