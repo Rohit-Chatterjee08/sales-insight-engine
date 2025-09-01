@@ -74,7 +74,7 @@ main {
     padding: 5rem;
 }
 
-/* --- THE FIX: Styles for the new Welcome / How-to-Use section --- */
+/* --- Welcome / How-to-Use section --- */
 .welcome-card {
     background-color: var(--card-color);
     border: 1px solid var(--border-color);
@@ -129,7 +129,6 @@ main {
     flex-shrink: 0;
 }
 
-/* --- THE VISIBILITY FIX --- */
 .step-text strong {
     color: var(--text-color) !important;
     font-weight: 600;
@@ -231,5 +230,29 @@ main {
 /* Utility Classes */
 .d-none {
     display: none !important;
+}
+
+/* --- THE FIX: Responsive Design for Mobile Devices --- */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 1rem;
+    }
+
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .file-upload-section {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .how-to-use {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
